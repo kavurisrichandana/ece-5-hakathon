@@ -1,0 +1,99 @@
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">F</div>
+                <span>FocusFlow</span>
+            </div>
+            <div class="toggle-dark">
+                <button id="dark-mode-toggle" class="secondary-btn">Dark Mode</button>
+            </div>
+        </header>
+
+        <div class="timer-container">
+            <div class="timer-mode-selector">
+                <button class="mode-btn active" data-mode="pomodoro">Pomodoro</button>
+                <button class="mode-btn" data-mode="short-break">Short Break</button>
+                <button class="mode-btn" data-mode="long-break">Long Break</button>
+            </div>
+            <div class="timer-display" id="timer-display">25:00</div>
+            <div class="timer-controls">
+                <button class="primary-btn" id="start-btn">Start</button>
+                <button class="secondary-btn" id="pause-btn" disabled>Pause</button>
+                <button class="secondary-btn" id="reset-btn">Reset</button>
+            </div>
+        </div>
+
+        <div class="task-section">
+            <div class="task-input-container panel">
+                <h2 class="panel-title">Add New Task</h2>
+                <input type="text" id="task-input" placeholder="What are you working on?">
+                <button class="primary-btn" id="add-task-btn">Add Task</button>
+            </div>
+            <div class="task-list-container panel">
+                <h2 class="panel-title">Tasks</h2>
+                <ul class="task-list" id="task-list">
+                    <!-- Tasks will be added here -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-value" id="focus-time">0 min</div>
+                <div class="stat-label">Focus Time Today</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="tasks-completed">0</div>
+                <div class="stat-label">Tasks Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-sessions">0</div>
+                <div class="stat-label">Total Sessions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="daily-goal">0%</div>
+                <div class="stat-label">Daily Goal</div>
+            </div>
+        </div>
+
+        <div class="quote-container fade-in" id="quote-container">
+            <p class="quote-text" id="quote-text">"The secret of getting ahead is getting started."</p>
+            <p class="quote-author" id="quote-author">- Mark Twain</p>
+        </div>
+
+        <div class="settings-container panel">
+            <h2 class="panel-title">Settings</h2>
+            <div class="settings-grid">
+                <div class="setting-item">
+                    <label class="setting-label" for="pomodoro-time">Pomodoro Time (minutes)</label>
+                    <input class="setting-input" type="number" id="pomodoro-time" value="25">
+                </div>
+                <div class="setting-item">
+                    <label class="setting-label" for="short-break-time">Short Break (minutes)</label>
+                    <input class="setting-input" type="number" id="short-break-time" value="5">
+                </div>
+                <div class="setting-item">
+                    <label class="setting-label" for="long-break-time">Long Break (minutes)</label>
+                    <input class="setting-input" type="number" id="long-break-time" value="15">
+                </div>
+                <div class="setting-item">
+                    <label class="setting-label" for="daily-goal-time">Daily Goal (minutes)</label>
+                    <input class="setting-input" type="number" id="daily-goal-time" value="120">
+                </div>
+            </div>
+            <button class="primary-btn" id="save-settings-btn">Save Settings</button>
+        </div>
+
+        <div class="leaderboard panel">
+            <h2 class="panel-title">Weekly Leaderboard</h2>
+            <ul class="leaderboard-list" id="leaderboard">
+                <li class="leaderboard-item">
+                    <span class="leaderboard-rank">1.</span>
+                    <span class="leaderboard-name">You</span>
+                    <span class="leaderboard-score" id="user-score">0 min</span>
+                </li>
+                <!-- More leaderboard items will be added here -->
+            </ul>
+        </div>
+    </div>
